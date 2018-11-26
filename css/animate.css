@@ -1,0 +1,276 @@
+/*导航栏*/
+.header-animate-init{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	background:rgba(0,0,0,.5);
+	z-index:3;
+}
+
+/*导航条*/
+.sideBar-animate-done{
+	opacity:1;
+	transform:translate(0,0);
+}
+
+.sideBar,
+.header{
+	transition:all 2s;
+}
+
+
+/*第一屏*/
+.section1Wrap-title,
+.section1Wrap-pic,
+.section1Wrap-shadow
+{
+	transition:all 1s;
+}
+
+.section1Wrap-title-animate-init,
+.section1Wrap-shadow-animate-init
+{
+	opacity:0;
+	transform:translate(0,200px);
+}
+
+.section1Wrap-title-animate-done,
+.section1Wrap-shadow-animate-done
+{
+	opacity:1;
+	transform:translate(0,0);
+}
+
+.section1Wrap-pic-animate-done{
+	opacity:1;
+	transform:translate(0,0);
+}
+
+.section1Wrap-pic-animate-init{
+	opacity: 0;
+	transform:translate(0,-200px);
+}
+
+/*第二瓶*/
+.section2-title,
+.section2-text,
+.section2-phone{
+	transition:all 1s;
+}
+
+.section2-title-animate-init
+{
+	opacity:0;
+	transform:translate(0,-100px);
+}
+
+.section2-text-animate-init
+{
+	opacity:0;
+	transform:translate(0,100px);
+}
+
+.section2-phone-animate-init
+{
+	opacity:0;
+	transform:translate(0,400px);
+}
+
+.section2-phone-right,
+.section2-phone-left,
+.section2-phone-leftOther
+
+{
+	transition:all 1s 0.5s;
+}
+
+.section2-phone-right-animate-init
+{
+	opacity:0;
+	transform:translate(-70px,0);
+}
+.section2-phone-left-animate-init
+{
+	opacity:0;
+	transform:translate(70px,0);
+}
+.section2-phone-leftOther-animate-init
+{
+	opacity:0;
+	transform:translate(70px,0);
+}
+
+/*第三屏*/
+.section3Wrap-title,
+.section3Wrap-text,
+.section3Wrap-phone
+{
+	transition:all 1s;
+}
+
+
+.section3Wrap-title-animate-init
+{
+	opacity:0;
+	transform:translate(0,-200px);
+}
+
+.section3Wrap-text-animate-init
+{
+	opacity: 0;
+	transform:translate(0,100px);
+}
+
+.section3Wrap-phone-animate-init
+{
+	opacity:0;
+	transform:translate(0,200px);
+}
+
+.section3Wrap-show
+{
+	transition:all 1s;
+}
+
+.section3Wrap-show-animate-init
+{
+	opacity:0;
+	transform:scale(.5);
+}
+
+/*第四屏*/
+.section4-title,
+.section4-text,
+.section4-phone-item-1
+{
+	transition:all 1s;
+}
+
+.section4-phone-item-2
+{
+	transition:all 1s 0.2s;
+}
+
+.section4-phone-item-3
+{
+	transition:all 1s 0.4s;
+}
+
+.section4-phone-item-4
+{
+	transition:all 1s 0.6s;
+}
+
+.section4-title-animate-init
+{
+	opacity: 0;
+	transform:translate(0,-200px);
+}
+
+.section4-text-animate-init
+{
+	opacity: 0;
+	transform:translate(0,100px);
+}
+
+.section4-phone-item-1-animate-init,
+.section4-phone-item-2-animate-init,
+.section4-phone-item-3-animate-init,
+.section4-phone-item-4-animate-init
+{
+	opacity:0;
+	transform:translate(-100px,0);
+}
+
+/*第五屏*/
+
+.section5-title,
+.section5-text,
+.section5-phone
+{
+	transition:all 1s;
+}
+
+.section5-title-animate-init
+{
+	opacity: 0;
+	transform:translate(0,-180px);
+}
+
+.section5-text-animate-init
+{
+	opacity: 0;
+	transform:translate(0,100px);
+}
+
+.section5-phone-animate-init
+{
+	opacity: 0;
+	transform:translate(0,150px);
+}
+
+/*指针动画*/
+
+@keyframes changePoint
+{
+	0%,100% {transform:scale(0);}
+	50% {transform:scale(1);}
+}
+
+.section2-phone-leftOther::after,
+.section2-phone-leftOther::before
+{
+	content:' ';
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:1px;
+	left:0;
+	background:rgba(255,0,0,0.4);
+	border-radius:50%;
+	animation:changePoint 2s infinite;
+}
+.section2-phone-leftOther::before
+{
+	animation:changePoint 2s infinite 1s;
+}
+
+.section2-phone-left::after,
+.section2-phone-left::before
+{
+	content:' ';
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:1px;
+	left:0;
+	background:rgba(255,0,0,0.4);
+	border-radius:50%;
+	animation:changePoint 2s infinite;
+}
+.section2-phone-left::before
+{
+	animation:changePoint 2s infinite 1s;
+}
+
+.section2-phone-right::after,
+.section2-phone-right::before
+{
+	content:' ';
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:1px;
+	right:1px;
+	background:rgba(255,0,0,0.4);
+	border-radius:50%;
+	animation:changePoint 2s infinite;
+}
+.section2-phone-right::before
+{
+	animation:changePoint 2s infinite 1s;
+}
